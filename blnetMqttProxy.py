@@ -22,4 +22,4 @@ while True:
     # frame1 = myBLnet[0]
     print(myBLnet)
     mqqtClient.publish("tumi/heizung", str(myBLnet))
-    time.sleep(10)
+    time.sleep(300)
