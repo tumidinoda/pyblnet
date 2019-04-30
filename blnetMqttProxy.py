@@ -11,7 +11,7 @@ mqqtClient.connect("10.0.0.11", 1883, 60)
 mqqtClient.loop_start()
 
 # connect to BLnet
-ip = '10.0.0.170'
+ip = "10.0.0.170"
 blnet = BLNETDirect(ip)
 
 while True:
