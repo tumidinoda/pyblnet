@@ -59,3 +59,4 @@ print(blnet._get_data(1))
 
 [1] https://www.haus-terra.at/heizung/download/Schnittstelle/Schnittstelle_PC_Bootloader.pdf
 edit by J.R.
+update
