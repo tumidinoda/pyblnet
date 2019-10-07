@@ -25,7 +25,7 @@ setup(
     py_modules=['pyblnet'],
     packages=find_packages(),
     package_data={'': ['*.html', '*.htm']},
-    install_requires=['htmldom', 'requests'],
+    install_requires=['htmldom', 'requests', 'paho-mqtt'],
     long_description=long_description,
     long_description_content_type='text/markdown',
     license=pyblnet.__license__,

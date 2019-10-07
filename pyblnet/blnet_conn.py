@@ -333,8 +333,8 @@ class BLNETDirect(object):
             info['sleep'][frame] = sleeps
         self._end_read(True)
         if len(frames) > 0:
-            frames['date'] = datetime.now()
-            frames['info'] = info
+            #frames['date'] = datetime.now()
+            #frames['info'] = info
             return frames
         raise ConnectionError("Could not get latest data")
 
