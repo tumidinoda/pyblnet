@@ -7,7 +7,7 @@ from pyblnet import BLNETDirect
 
 # connect to MQTT-Broker
 mqqtClient = mqtt.Client()
-mqqtClient.connect("10.0.0.11", 1883, 60)
+mqqtClient.connect("10.0.0.36", 1883, 60)
 mqqtClient.loop_start()
 
 # connect to BLnet
