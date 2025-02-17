@@ -6,6 +6,6 @@
  
  //Multi Plattform build
  //turn on Beta-Feature containerd in docker-desktop
- // login vor push nicht vergessen!
+ //login vor push nicht vergessen!
  
  docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t jorodev/myblnet:V23.11 -t jorodev/myblnet:latest --push .

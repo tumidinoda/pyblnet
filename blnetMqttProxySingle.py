@@ -3,10 +3,12 @@
 import paho.mqtt.client as mqtt
 import json
 import datetime
+import time
 
 from pyblnet.blnet_conn import BLNETDirect
 
 # connect to MQTT-Broker
+print(" ")
 print(str(datetime.datetime.now()) + ": Blnet started")
 mqqtClient = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
 mqqtClient.connect("10.62.0.204", 1883, 60)
@@ -18,7 +20,7 @@ blnet = BLNETDirect(ip)
 myBLnet = blnet.get_latest()
 # print(myBLnet)
 if myBLnet[0] == 'timeout' or myBLnet[1] == 'timeout':
-    print(str(datetime.datetime.now())+": Timeout")
+    print(str(datetime.datetime.now()) + ": Timeout")
     exit(1)
 # mqqtClient.publish("tumi/heizung/raw", str(myBLnet)) */
 
@@ -50,6 +52,7 @@ mySensorsJson["Soll_HK"] = mySgrp2[5]
 mySensorsJson["Raum_WG"] = mySgrp2[12]
 mySensorsJson["Zirkulation_RL"] = mySgrp2[14]
 
-mqqtClient.publish("tumi/heizung/sensors", json.dumps(mySensorsJson))
+mqqtClient.publish("tumi/heizung/sensors", json.dumps(mySensorsJson), qos=1, retain=True)
 print(str(mySensorsJson))
+time.sleep(5)
 exit(0)
