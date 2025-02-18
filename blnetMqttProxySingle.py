@@ -56,6 +56,7 @@ mqqtClient.publish("tumi/heizung/sensors", json.dumps(mySensorsJson), qos=1, ret
 
 # base topic
 bt = "tumi/heizung/sensor/"
+# send values separte for homeasistant
 mqqtClient.publish(bt + "Solar_Fuehler", mySgrp1[1], qos=1, retain=True)
 mqqtClient.publish(bt + "Solar_Vorlauf", mySgrp1[2], qos=1, retain=True)
 mqqtClient.publish(bt + "Solar_Unten", mySgrp1[3], qos=1, retain=True)
@@ -77,9 +78,9 @@ mqqtClient.publish(bt + "Wasser_Oben", mySgrp1[16], qos=1, retain=True)
 mqqtClient.publish(bt + "Soll_FBH", mySgrp2[2], qos=1, retain=True)
 mqqtClient.publish(bt + "Soll_HK", mySgrp2[5], qos=1, retain=True)
 mqqtClient.publish(bt + "Raum_WG", mySgrp2[12], qos=1, retain=True)
-mqqtClient.publish(bt + "Zirkulation_RL", mySgrp2[14], qos=1, retain=True)
+mqqtClient.publish(bt + 'Zirkulation_RL', mySgrp2[14], qos=1, retain=True)
 
 
-print(str(mySensorsJson))
+print(mySensorsJson)
 time.sleep(5)
 exit(0)
