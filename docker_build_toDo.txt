@@ -1,6 +1,6 @@
- docker build -t jorodev/myblnet:V25.02 -t jorodev/myblnet:latest .  //insert actual year.month as version
+ docker build -t jorodev/myblnet:V25.02.1 -t jorodev/myblnet:latest .  //insert actual year.month as version
  docker login
- docker push jorodev/myblnet:V25.02
+ docker push jorodev/myblnet:V25.02.1
  docker push jorodev/myblnet:latest
  
  
