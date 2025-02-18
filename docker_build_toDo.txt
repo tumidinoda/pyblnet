@@ -1,6 +1,6 @@
- docker build -t jorodev/myblnet:V23.11 -t jorodev/myblnet:latest .  //insert actual year.month as version
+ docker build -t jorodev/myblnet:V25.02 -t jorodev/myblnet:latest .  //insert actual year.month as version
  docker login
- docker push jorodev/myblnet:V23.11
+ docker push jorodev/myblnet:V25.02
  docker push jorodev/myblnet:latest
  
  
@@ -8,4 +8,4 @@
  //turn on Beta-Feature containerd in docker-desktop
  //login vor push nicht vergessen!
  
- docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t jorodev/myblnet:V23.11 -t jorodev/myblnet:latest --push .
+ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t jorodev/myblnet:V25.02.1 -t jorodev/myblnet:latest --push .
